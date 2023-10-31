@@ -1,0 +1,312 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* Header Section Styling Starts */
+header {
+  padding: 20px 0px;
+  background: #2e2e2e;
+  color: rgb(131, 202, 202);
+  overflow: hidden;
+}
+
+
+header h1 {
+  font-size: xx-large;
+  display: inline-block;
+  font-weight: bold;
+  padding: 5px 20px 5px 60px;
+  color: rgb(56, 56, 56);
+  background-color: rgb(131, 202, 202);
+}
+
+header nav {
+  margin-right: 80px;
+  float: right;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header a {
+  color: rgb(131, 202, 202);
+  text-align: center;
+  padding: 12px 12px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 25px;
+  border-radius: 1px;
+
+}
+
+/* Change the background color when mouse-over */
+header a:hover {
+  background-color: rgb(131, 202, 202);
+  color: #2e2e2e;
+}
+
+
+
+
+/* Style hero image*/
+.hero-image {
+  background-image: linear-gradient(rgba(20, 85, 94, 0.5), rgb(99, 155, 155)), url('../images/02-hero-bg.jpg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 100px;
+  display: block
+}
+
+.hero-image img {
+  width: 200px;
+  position: absolute;
+  right: 342px;
+  bottom: 0px;
+}
+
+.hero-text {
+  position: absolute;
+  right: 50px;
+  bottom: 0px;
+  color: rgb(41, 41, 41);
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 5px solid rgb(131, 202, 202);
+  margin-right: 50px;
+}
+
+
+/* Main Section Styiing*/
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 20% 79%;
+  grid-template-rows: auto, auto;
+  gap: 50px;
+  margin: 50px;
+}
+
+
+
+/* Main Section Left Side*/
+
+#grid-1,
+#grid-3,
+#grid-5 {
+  color: rgb(46, 49, 92);
+  border-right: 5px solid rgb(46, 49, 92);
+  text-align: right;
+  font-size: x-large;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+
+/* Main Section Right Side*/
+#grid-2,
+#grid-4,
+#grid-6 {
+  color: rgb(46, 49, 92);
+  text-align: left;
+  padding-right: 80px;
+}
+
+
+/* Portfolio Grid */
+
+#portfolio {
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "project-1 project-1"
+    "project-2 project-3"
+    "project-4 project-5"
+  ;
+}
+
+#project-1 {
+  grid-area: project-1;
+  background-image: url("../images/02-portfolio-1.jpg");
+
+}
+
+#project-2 {
+  grid-area: project-2;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#project-3 {
+  grid-area: project-3;
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+#project-4 {
+  grid-area: project-4;
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+
+#project-5 {
+  grid-area: project-5;
+  background-image: url("../images/02-run-buddy.jpg");
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.categoryGridArea:hover {
+  box-shadow: inset 0px 0px 8px rgb(19, 52, 102), 0 0 15px rgb(30, 100, 96);
+}
+
+
+.heading {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 5px solid rgb(131, 202, 202);
+}
+
+
+
+/* Contact Links Styling*/
+#contact-links a {
+  color: rgb(50, 55, 78);
+  text-align: center;
+  padding: 12px 12px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+
+/* Footer Styling*/
+footer {
+  color: aliceblue;
+  background-color: rgb(39, 39, 39);
+  text-align: center;
+  padding: 50px;
+
+}
+
+
+
+/* Mobile Styling for when the screen is 800px wide or less*/
+
+@media only screen and (max-width: 800px) {
+
+  /* Header */
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header nav {
+    margin: unset;
+  }
+
+  header nav ul {
+    padding: unset;
+
+  }
+
+  header a {
+    padding: 10px;
+  }
+
+  /* Hero */
+  .hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .hero-text,
+  .hero-image img {
+    position: unset;
+    margin: unset;
+  }
+
+  /* Main */
+
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  /* Main Left side */
+  #grid-1,
+  #grid-3,
+  #grid-5 {
+    border-bottom: 4px solid #3a4555;
+    border-right: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Main Right side */
+  #grid-2,
+  #grid-6 {
+    text-align: center;
+    width: auto;
+    padding-right: unset;
+  }
+
+  /* Portfolio */
+
+  #portfolio,
+  #grid-4 {
+    display: flex;
+    flex-direction: column;
+    padding-right: unset;
+    width: 500px;
+  }
+
+  .categoryGridArea {
+    height: 300px;
+    padding-right: unset;
+  }
+
+
+  /* Contacts */
+
+  .contact-links {
+    flex-direction: column;
+  }
+
+}
